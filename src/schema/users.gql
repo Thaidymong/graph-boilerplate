@@ -1,0 +1,32 @@
+extend type Mutation {
+  createUserMutation(input: UserInput): Int
+  updateUserMutation(id: Int!, input: UserInput): Int
+  removeUserMutation(id: Int!): Int
+}
+
+type Query {
+  listAllUsers: [Users]
+  user(id: Int!): Users
+}
+
+input UserInput {
+  id: Int
+  firstname: String
+  lastname: String
+  gender: String
+  tel: String
+  email: String
+  address: String
+  country: String
+}
+
+type Users {
+  id: Int
+  firstname: String
+  lastname: String
+  gender: String
+  tel: String
+  email: String
+  address: String
+  country: String
+}
